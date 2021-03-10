@@ -12,11 +12,11 @@ Using Flow-CLI, Flow Emulator, Go and React with Docker Containers
 4. run $ docker-compose up emulator
 5. run $ docker-compose build cli
 6. run $ docker-compose up cli
-7. connect to cli container
+7. connect to flow-cli container
    1. run $ docker ps
-   2. get the container id of flowcli conatiner
+   2. get the container id of flow-cli conatiner
    3. run $ docker exec -it \<container id \> sh
-   4. while in flowcli container you can execute flow commands
+   4. while in flow-cli container you can execute flow commands
 
 ## To Do
 
