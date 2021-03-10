@@ -1,13 +1,21 @@
 version: "3"
 
 services:
-  flowcli:
-    container_name: flowcli
-    build:
-      context: ./
-      dockerfile: flowcli.dockerfile
-    volumes:
-      - ./:/dapp
+
+  emulator:
+    image: gcr.io/flow-container-registry/emulator
+    container_name: flow-emulator
     ports:
       - "3596:3596"
       - "8092:8080"
+
+  cli:
+    container_name: flow-cli
+    build:
+      context: ./
+      dockerfile: flowcli.dockerfile
+    command: sh
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./:/dapp

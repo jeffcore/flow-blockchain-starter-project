@@ -4,5 +4,5 @@ if test -f "$FILE"; then
     echo "$FILE exists."
 else
     flow project init
-    flow project start-emulator
 fi
+sleep 1d
