@@ -2,12 +2,19 @@ version: "3"
 
 services:
 
-  emulator:
-    image: gcr.io/flow-container-registry/emulator
-    container_name: flow-emulator
-    ports:
-      - "3596:3596"
-      - "8092:8080"
+  #  This does not work receive error:
+  #      client: rpc error: code = Unimplemented desc = unknown service flow.access.AccessAPI[GIN] 2
+  #  emulator:
+  #   image: gcr.io/flow-container-registry/emulator
+  #   container_name: flow-emulator
+  #   environment:
+  #     - FLOW_VERBOSE=true
+  #     - FLOW_INTERVAL=5s
+  #     - FLOW_PERSIST=true
+  #     - FLOW_SERVICEPUBLICKEY=8872ad872cb9ba73ecdbab1343513621424b7ddc4644e780063143a4df1ee9d80cf41229c27706b80ba48ec17c8de16a3364463f7354b6404d2f64342a1807bd
+  #   ports:
+  #     - "3569:3569"
+  #     - "8092:8080"
 
   cli:
     container_name: flow-cli
@@ -19,3 +26,22 @@ services:
     tty: true
     volumes:
       - ./:/dapp
+
+  emulator:
+    container_name: flow-emulator
+    build:
+      context: ./
+      dockerfile: flowemulator.dockerfile    
+    ports:
+      - "3569:3569"
+      - "8092:8080" 
+
+  api:
+    container_name: dapp-api
+    build:
+      context: ./dapp-api
+      dockerfile: api.dockerfile    
+    ports:
+      - "8066:8080"
+    volumes:
+      - ./dapp-api:/app
