@@ -16,4 +16,4 @@ COPY flowcli_boot.sh ./
 # give boot file ample permissions
 RUN chmod +x flowcli_boot.sh
 # run boot file when container starts
-ENTRYPOINT ["sh", "./flowcli_boot.sh"]
+ENTRYPOINT ["sh", "./flowemulator_boot.sh"]
