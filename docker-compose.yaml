@@ -2,7 +2,7 @@ version: "3"
 
 services:
 
-  #  This does not work receive error:
+  #  This does not work received error:
   #      client: rpc error: code = Unimplemented desc = unknown service flow.access.AccessAPI[GIN] 2
   #  emulator:
   #   image: gcr.io/flow-container-registry/emulator

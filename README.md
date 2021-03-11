@@ -4,6 +4,15 @@ WORK IN PROGRESS
 
 Using Flow-CLI, Flow Emulator, Go Gin and React with Docker Containers
 
+## To Do
+
+- [x] Dockerize Flow-CLI
+- [x] Dockerize Flow Emulator (using 2nd instance of Flow CLI)
+- [x] Dockerize Flow Go Environment
+- [ ] Dockerize React or VueJS App (haven't decided)
+- [ ] Dockerize Deployment
+- [ ] Build something and go to the MOON!
+
 ## How to use
 
 ### Clone Repo
@@ -32,12 +41,3 @@ Using Flow-CLI, Flow Emulator, Go Gin and React with Docker Containers
 1. run $ docker-compose build api
 2. run $ docker-compose up api
 3. access app via http://localhost:8066/
-
-## To Do
-
-- [x] Dockerize Flow-CLI
-- [x] Dockerize Flow Emulator (using 2nd instance of Flow CLI)
-- [x] Dockerize Flow Go Environment
-- [ ] Dockerize React or VueJS App (haven't decided)
-- [ ] Dockerize Deployment
-- [ ] Build something and go to the MOON!
