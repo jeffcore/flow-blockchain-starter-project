@@ -2,13 +2,13 @@
 
 WORK IN PROGRESS
 
-Using Flow-CLI, Flow Emulator, Go Gin and React with Docker Containers
+Using Flow-CLI, Flow Emulator, Go Gin API with Flow Go SDK, and React with Docker Containers
 
 ## To Do
 
 - [x] Dockerize Flow-CLI
 - [x] Dockerize Flow Emulator (using 2nd instance of Flow CLI)
-- [x] Dockerize Flow Go Environment
+- [x] Dockerize Flow Go Environment using Flow Go SDK
 - [ ] Dockerize React or VueJS App (haven't decided)
 - [ ] Dockerize Deployment
 - [ ] Build something and go to the MOON!
